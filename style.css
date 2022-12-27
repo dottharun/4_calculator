@@ -2,9 +2,30 @@
   box-sizing: border-box;
 }
 
+.body {
+  margin: 0;
+}
+
 .app {
   margin: 0 auto;
   margin-top: 50px;
   width: 500px;
   background-color: red;
+}
+
+.answer {
+  background-color: black;
+  color: aliceblue;
+  text-align: end;
+}
+
+.button-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-areas:
+    "c c back divide"
+    "7 8 9    multiply"
+    "4 5 6    subtract"
+    "1 2 3    add"
+    "0 0 0    equal";
 }

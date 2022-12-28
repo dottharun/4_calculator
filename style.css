@@ -19,6 +19,74 @@
   text-align: end;
 }
 
+.cancel {
+  grid-area: c;
+}
+
+.back-arrow {
+  grid-area: back;
+}
+
+.nine {
+  grid-area: 9;
+}
+
+.eight {
+  grid-area: 8;
+}
+
+.seven {
+  grid-area: 7;
+}
+
+.six {
+  grid-area: 6;
+}
+
+.five {
+  grid-area: 5;
+}
+
+.four {
+  grid-area: 4;
+}
+
+.three {
+  grid-area: 3;
+}
+
+.two {
+  grid-area: 2;
+}
+
+.one {
+  grid-area: 1;
+}
+
+.zero {
+  grid-area: 8;
+}
+
+.divide {
+  grid-area: divide;
+}
+
+.multiply {
+  grid-area: multiply;
+}
+
+.subtract {
+  grid-area: subtract;
+}
+
+.add {
+  grid-area: add;
+}
+
+.equal {
+  grid-area: equal;
+}
+
 .button-grid {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;

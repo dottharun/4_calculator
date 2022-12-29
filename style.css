@@ -10,15 +10,40 @@
   margin: 0 auto;
   margin-top: 50px;
   width: 500px;
-  background-color: red;
+  background-color: black;
 }
 
 .answer {
   background-color: black;
   color: aliceblue;
   text-align: end;
+  padding-top: 75px;
+  font-family: monospace;
+  font-size: 50px;
 }
 
+.button {
+  font-size: 50px;
+  font-weight: 300;
+  height: 125px;
+  border: 2px solid black;
+  border-radius: 5px;
+  background-color: #c4c4c9;
+}
+
+.button:hover {
+  background-color: white;
+}
+
+.multiply,
+.divide,
+.subtract,
+.add,
+.equal {
+  background-color: #f28d03;
+}
+
+/* grid setup */
 .cancel {
   grid-area: c;
 }

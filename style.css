@@ -28,43 +28,43 @@
 }
 
 .nine {
-  grid-area: 9;
+  grid-area: nine;
 }
 
 .eight {
-  grid-area: 8;
+  grid-area: eight;
 }
 
 .seven {
-  grid-area: 7;
+  grid-area: seven;
 }
 
 .six {
-  grid-area: 6;
+  grid-area: six;
 }
 
 .five {
-  grid-area: 5;
+  grid-area: five;
 }
 
 .four {
-  grid-area: 4;
+  grid-area: four;
 }
 
 .three {
-  grid-area: 3;
+  grid-area: three;
 }
 
 .two {
-  grid-area: 2;
+  grid-area: two;
 }
 
 .one {
-  grid-area: 1;
+  grid-area: one;
 }
 
 .zero {
-  grid-area: 8;
+  grid-area: zero;
 }
 
 .divide {
@@ -91,9 +91,9 @@
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   grid-template-areas:
-    "c c back divide"
-    "7 8 9    multiply"
-    "4 5 6    subtract"
-    "1 2 3    add"
-    "0 0 0    equal";
+    "c     c     back  divide"
+    "seven eight nine  multiply"
+    "four  five  six   subtract"
+    "one   two   three add"
+    "zero  zero  zero  equal";
 }

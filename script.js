@@ -6,7 +6,6 @@ const anyNumberButton = document.querySelectorAll(".number");
 let buffer = "0";
 
 function reRenderResult() {
-  console.log("rendered fresh");
   result.textContent = buffer;
 }
 
@@ -16,8 +15,6 @@ function handleNumber(number) {
   } else {
     buffer += number;
   }
-
-  console.log(buffer);
 }
 
 function init() {

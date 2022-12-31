@@ -32,10 +32,14 @@ function handleSpecial(special) {
       buffer = "0";
       break;
     case "=":
-      console.log("=");
+      console.log("equals");
       break;
     case "←":
-      console.log("back-arrow");
+      if (buffer.length > 1) {
+        buffer = buffer.substring(0, buffer.length - 1);
+      } else {
+        buffer = "0";
+      }
   }
 }
 

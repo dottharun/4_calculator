@@ -31,9 +31,11 @@ function handleSpecial(special) {
     case "C":
       buffer = "0";
       break;
-
-    default:
+    case "=":
+      console.log("=");
       break;
+    case "←":
+      console.log("back-arrow");
   }
 }
 

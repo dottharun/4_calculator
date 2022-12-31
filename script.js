@@ -3,21 +3,33 @@
 const result = document.querySelector(".answer");
 const anyNumberButton = document.querySelectorAll(".number");
 
-function handleNum(num) {
-  console.log(num);
+let buffer = "0";
+
+function reRenderResult() {
+  console.log("rendered fresh");
+  result.textContent = buffer;
+}
+
+function handleNumber(number) {
+  if (buffer === "0") {
+    buffer = number;
+  } else {
+    buffer += number;
+  }
+
+  console.log(buffer);
 }
 
 function init() {
   //Number button input
   for (let i = 0; i < anyNumberButton.length; i++) {
     anyNumberButton[i].addEventListener("click", function () {
-      // result.textContent += anyNumberButton[i].textContent;
-      handleNum(anyNumberButton[i].textContent);
+      handleNumber(anyNumberButton[i].textContent);
+
+      //Result screen rerender
+      reRenderResult();
     });
   }
-
-  //Result screen
-  reRenderResult();
 }
 
 init();

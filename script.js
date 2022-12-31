@@ -27,7 +27,14 @@ function handleOperator(operator) {
 
 //To handle specials
 function handleSpecial(special) {
-  console.log(special);
+  switch (special) {
+    case "C":
+      buffer = "0";
+      break;
+
+    default:
+      break;
+  }
 }
 
 function init() {
@@ -54,7 +61,7 @@ function init() {
   //Special input
   for (let i = 0; i < anySpecialButton.length; i++) {
     anySpecialButton[i].addEventListener("click", function () {
-      handleOperator(anySpecialButton[i].textContent);
+      handleSpecial(anySpecialButton[i].textContent);
 
       //Result screen rerender
       reRenderResult();

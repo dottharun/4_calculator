@@ -69,7 +69,7 @@ function handleSpecial(special) {
       if (previousOperator === null) {
         return;
       } else {
-        flushOperator(runningTotal);
+        flushOperator(parseInt(buffer));
         buffer = "" + runningTotal;
       }
 

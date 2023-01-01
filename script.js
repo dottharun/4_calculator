@@ -6,6 +6,8 @@ const anyOperatorButton = document.querySelectorAll(".operator");
 const anySpecialButton = document.querySelectorAll(".special");
 
 let buffer = "0";
+let runningTotal = 0;
+let previousOperator;
 
 function reRenderResult() {
   result.textContent = buffer;
@@ -21,8 +23,39 @@ function handleNumber(number) {
 }
 
 //To handle operator input
-function handleOperator(operator) {
-  console.log(operator);
+function handleMath(operator) {
+  if (buffer === "0") {
+    //do nothing
+    return;
+  }
+
+  const intBuffer = parseInt(buffer);
+  if (runningTotal === 0) {
+    runningTotal = intBuffer;
+  } else {
+    flushOperator(intBuffer);
+  }
+
+  previousOperator = operator;
+  buffer = "0";
+  console.log(runningTotal);
+}
+
+function flushOperator(value) {
+  switch (previousOperator) {
+    case "+":
+      runningTotal += value;
+      break;
+    case "-":
+      runningTotal -= value;
+      break;
+    case "×":
+      runningTotal *= value;
+      break;
+    case "÷":
+      runningTotal /= value;
+      break;
+  }
 }
 
 //To handle specials
@@ -30,8 +63,12 @@ function handleSpecial(special) {
   switch (special) {
     case "C":
       buffer = "0";
+      runningTotal = 0;
       break;
     case "=":
+      if (previousOperator === null) {
+        return;
+      }
       console.log("equals");
       break;
     case "←":
@@ -57,7 +94,7 @@ function init() {
   //Operator input
   for (let i = 0; i < anyOperatorButton.length; i++) {
     anyOperatorButton[i].addEventListener("click", function () {
-      handleOperator(anyOperatorButton[i].textContent);
+      handleMath(anyOperatorButton[i].textContent);
 
       //Result screen rerender
       reRenderResult();

@@ -68,8 +68,11 @@ function handleSpecial(special) {
     case "=":
       if (previousOperator === null) {
         return;
+      } else {
+        flushOperator(runningTotal);
+        buffer = "" + runningTotal;
       }
-      console.log("equals");
+
       break;
     case "←":
       if (buffer.length > 1) {
